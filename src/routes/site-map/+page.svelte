@@ -11,13 +11,13 @@
         const title = parts.length > 2 ? parts[parts.length - 2] : "Home";
         // Generate the link
         const path = file.replace("./", "").replace("+page.svelte", "");
-        return { title, link: \`/\${path}\` };
+        return { title, link: path };
       });
     </script>
 
     {#each links as item}
           <li class="flex w-full h-full justify-center items-center">
-            <a class="text-center text-xl font-bold" href={item.link}
+            <a class="text-center text-xl font-bold" href={"/{item.link}"}
               >{item.title}</a
             >
           </li>

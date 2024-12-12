@@ -9,7 +9,7 @@
       const title = parts.length > 2 ? parts[parts.length - 2] : "Home";
       // Generate the link
       const path = file.replace("./", "").replace("+page.svelte", "");
-      return { title, link: `/${path}` };
+      return { title, link: path };
     });
 </script>
 
